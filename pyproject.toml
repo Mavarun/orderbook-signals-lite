@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orderbook-signals-lite"
+version = "0.1.0"
+description = "Research slice: mid, bid-ask imbalance, and microprice L1 features for short-horizon mid-return prediction with costed time-split backtest."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "M.Varun", email = "116015799+Mavarun@users.noreply.github.com" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
